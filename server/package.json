@@ -1,0 +1,26 @@
+{
+  "name": "onehealthwebapp",
+  "version": "1.0.0",
+  "description": "One Heatlh Web Application",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "server": "node --no-warnings=ExperimentalWarning --loader ts-node/esm server.ts",
+    "dev": "nodemon --ext ts --exec 'npm run server'",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "pg": "^8.13.1",
+    "ts-node": "^10.9.2"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/pg": "^8.11.10",
+    "nodemon": "^3.1.9"
+  }
+}
