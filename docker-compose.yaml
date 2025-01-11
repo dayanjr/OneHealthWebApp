@@ -4,9 +4,8 @@ services:
   db:
     image: postgres
     restart: always
-    environment:
-      POSTGRES_PASSWORD: s@jils*wdcv$
-      POSTGRES_USER: onehealth
+    env_file: 
+      - .env
     networks:
       - one-health
     ports:
