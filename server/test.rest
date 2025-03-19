@@ -1,23 +1,123 @@
-###
-GET http://localhost:3000/setup
-
-###
-
 ### 
-POST http://localhost:3000
+POST http://localhost:3000/users
 Content-Type: application/json
 
 {
-    "name": "Frank",
-    "location": "Georgia"
+    "name": "Jerimiah",
+    "location": "New York",
+    "points": 100
 }
 
 ###
 
+POST http://localhost:3000/rewards
+Content-Type: application/json
+
+{
+    "name": "Free Coffee",
+    "points": 100
+}
+
 ###
-GET http://localhost:3000
+GET http://localhost:3000/users/5
+###
+GET http://localhost:3000/users/rewards/3
+###
+POST  http://localhost:3000/users/rewards/2
+Content-Type: application/json
+
+{
+    "user_id": 40,
+    "reward_id": 1
+}
+
 ###
 
-GET http://localhost:3000/3
+GET http://localhost:3000/rewards/active
 
 ###
+DELETE http://localhost:3000/rewards/4
+
+###
+PUT http://localhost:3000/users/2
+Content-Type: application/json
+
+{
+    "name": "Lucy",
+    "location": "Paris",
+    "points": 100
+}
+###
+GET http://localhost:3000/8/rewards
+
+###
+
+POST http://localhost:3000/3/rewards
+Content-Type: application/json
+
+{
+    "user_id": 8,
+    "reward_id": 1
+}
+
+### 
+GET http://localhost:3000/users/rewards/2
+
+###
+
+GET http://localhost:3000/users/rewards/popular
+
+###
+
+GET http://localhost:3000/users/charles/boston
+
+###
+
+GET http://localhost:3000/rewards/name/target%20gift%20card
+
+###
+
+GET http://localhost:3000/users/notifications/3
+
+###
+
+POST http://localhost:3000/users/notifications
+Content-Type: application/json
+
+{
+    "user_id": 3,
+    "notification_id": 1
+}
+
+###
+
+GET http://localhost:3000/users/notifications/40
+
+###
+
+GET http://localhost:3000/users/drugs/2
+
+###
+
+POST http://localhost:3000/users/tookdrugs/2
+Content-Type: application/json
+
+{
+    "drug_id": 1
+}
+
+###
+
+GET http://localhost:3000/users/drugs/tookdrugs/2
+
+###
+
+GET http://localhost:3000/users/drugs/tookdrugs/2/table
+
+###
+
+GET http://localhost:3000/users/drugs/tookdrugs/3/report
+
+### 
+
+Get http://localhost:3000/users/drugs/tookdrugs/2/report/1

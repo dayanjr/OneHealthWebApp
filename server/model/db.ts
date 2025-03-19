@@ -4,7 +4,7 @@ const { Pool } = pkg;
 const pool = new Pool({
     host: 'db',
     port: 5432,
-    user: 'onehealth',
+    user: process.env.POSTGRES_USER,
     password: process.env.POSTGRES_PASSWORD
 });
 

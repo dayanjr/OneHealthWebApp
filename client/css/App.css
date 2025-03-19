@@ -1,0 +1,372 @@
+#root {
+  max-width:none;
+  margin: 0 auto;
+  margin-bottom: 10em;
+  text-align: center;
+}
+
+.logo {
+  height: 3em;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+
+.card {
+  margin-top: 1em;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  border: gray solid 1px;
+  border-radius: 10px;
+  justify-self: center;
+  font-size: large;
+  button {
+    margin: 1em;
+  }
+  label {
+    margin: 0.5em;
+    font-size: large;
+    color: rgb(0, 0, 0);
+  }
+}
+
+.userButtons{
+  margin: 1em;
+  button {
+    margin: 0.5em;
+    width: 17.5em;
+    height: 5em;
+  }
+}
+
+.rewards-item{
+  background-color: rgb(205, 204, 204);
+  border-radius: 10px;
+  padding: 1em;
+  margin: 1em;
+  width: 25%;
+  height: 17em;
+  font-size:large;
+}
+
+.rewards-item h1{
+  height: 2.25em;
+  overflow: scroll;
+}
+
+
+.rewards-container{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+
+
+.nav-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: rgb(93, 93, 93);
+  padding: 2em;
+}
+
+
+.nav-container a{
+  font-size: x-large;
+  margin: 1em;
+  width: 6em;
+  text-align: center;
+  font-weight: normal;
+  text-decoration: none;
+  box-shadow: inset 0 0 0 0 #54b3d6;
+  color: #54b3d6;
+  padding: 0rem .25rem;
+  margin: 0 -.25rem;
+  transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+  position: relative;
+}
+
+.nav-container span{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+
+.active{
+  text-decoration: underline;
+}
+
+.nav-container a:hover{
+  box-shadow: inset 200px 0 0 0 #54b3d6;;
+  color: black;
+}
+
+
+.rewards_history_buttons{
+  display: flex;
+  justify-content: center;
+  button {
+    margin: 1em;
+  }
+}
+
+/* admin-rewards page*/
+
+.rewards-container-admin{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.rewards-container-admin button{
+  /* margin: 0.2em; */
+  margin: 0.2em;
+}
+
+
+.rewards-item-admin{
+  background-color: rgb(205, 204, 204);
+  border-radius: 10px;
+  padding: 1em;
+  width: 15em;
+  margin: 1em;
+  height: 12em;
+  font-size: large;
+}
+
+.rewards-history-container{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.rewards-history-item{
+  background-color: rgb(205, 204, 204);
+  border-radius: 10px;
+  padding: 1em;
+  margin: 1em;
+  width: 20%;
+  height: 20em;
+}
+
+.rewards-history-item .title-container{
+  height: 8em;
+}
+
+.popular-prizes-admin{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size:smaller;
+  flex-wrap: wrap;
+}
+
+.rewards-list-container-admin{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.rewards-list-container-admin button{
+  margin: 1em;
+  width: 13em;
+  font-size: large;
+}
+
+
+.bar-graph{
+  width: 70%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  margin:auto;
+}
+
+.rewards-summary{
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.status-container,.points-container{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+
+.create-reward{
+  width: 30%;
+  margin-left: 33.5%;
+  justify-content: center;
+  align-items: center;
+  border: black solid 5px;
+  border-radius: 10px;
+  padding: 1em;
+}
+
+.create-reward-form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.create-reward-form input{
+  margin: 0.5em;
+  width: 20em;
+}
+
+
+/* Footer */
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #282c34;
+  color: white;
+  text-align: center;
+  padding: 1em;
+  display: flex;
+  flex-direction: row;
+  img{
+    margin-right: 1em;
+  }
+}
+
+/* Dashboard */
+
+#notification-preview {
+  float: left;
+  height: 500px;
+  width: 30%;
+  max-height: 500px;
+  overflow: auto;
+  margin: 0 5%;
+  margin-bottom: 10%;
+  align-items: center;
+}
+
+#notification-preview select {
+  width: 10em;
+}
+
+#notification-preview .notification-button{
+  padding: 2% 0;
+  width: 100%;
+  transition: color .3s ease-in-out, box-shadow .4s ease-in-out;
+}
+#notification-preview .notification-button:hover{
+  box-shadow: inset 500px 0 0 0 #54b3d6;
+}
+#notification-preview .overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+#notification-preview .overlay .card {
+  background-color: rgb(255, 253, 253);
+  max-height: 80%;
+  overflow-y: auto;
+}
+
+.dashboard{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+
+.medication_info_table{
+  display: flex;
+  justify-content: center;
+  margin: 1em;
+}
+
+.records_table{
+  display: flex;
+  justify-content: center;
+  margin: 1em;
+}
+
+.medication_records button{
+  margin: 1em;
+}
+
+@media (prefers-color-scheme: dark) {
+  .rewards-item{
+    color: rgb(0, 0, 0);
+    background-color: rgb(160, 160, 160);
+  }
+  .create-reward{
+    background-color: rgb(93, 93, 93);
+    color: white;
+  }
+  .rewards-history-item{
+    color: black;
+    background-color: rgb(160, 160, 160);
+  }
+  .rewards-item-admin{
+    color: black;
+    background-color: rgb(160, 160, 160);
+  }
+  #notification-preview .overlay .card {
+    background-color: rgb(41, 41, 41);
+    max-height: 80%;
+    overflow-y: auto;
+  }
+  .card label{
+    color: white;
+  }
+}
+
+@media (max-width: 425px) {
+  .nav-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-container .logo {
+    align-self: flex-start;
+  }
+}

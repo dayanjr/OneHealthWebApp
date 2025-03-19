@@ -1,54 +1,40 @@
 import express from 'express';
 
+import cors from 'cors';
+
 import 'dotenv/config';
 
-import pool from './db.js';
+import { errorHandler } from './middleware/errors.js';
+
+import userRouter from './routes/users.js';
+
+import rewardsRouter from './routes/rewards.js';
+
+import userRewardsRouter from './routes/userRewards.js';
+
+import userNotificationsRouter from './routes/userNotifications.js';
+
+import userMedicationsRouter from './routes/userMed.js';
 
 const app = express();
 
+app.use(cors());
+
 app.use(express.json());
 
-app.get('/', async(req, res) => {
-    try{
-        const allUsers = await pool.query('SELECT * FROM users');
-        res.status(200).send(allUsers.rows);
-    } catch (err: any) {
-        console.error(err.message);
-    }
-});
+app.use(errorHandler);
 
-app.get('/:id', async(req, res) => {
-    const { id } = req.params;
-    try{
-        const user = await pool.query('SELECT * FROM users WHERE id = $1', [id]);
-        res.status(200).send(user.rows);
-    } catch (err: any) {
-        console.error(err.message);
-    }
-});
 
-app.post('/', async(req, res) => {
-    const { name, location } = req.body;
-    try{
-        await pool.query('INSERT INTO users (name, location) VALUES($1, $2)', [name, location]);
-        res.status(200).send({
-            message: "susccessfully added user",
-        })
-    } catch (err: any) {
-        console.error(err.message);
-    }
-});
+app.use('/users/rewards', userRewardsRouter);
 
-app.get('/setup', async (req, res) => {
-    try{
-        await pool.query('CREATE TABLE IF NOT EXISTS users (id SERIAL PRIMARY KEY, name VARCHAR(255), location VARCHAR(255))');
-        res.status(200).send({
-            message: "Table created successfully",
-        });
-    } catch (err: any) {
-        console.error(err.message);
-    }
-});
+app.use('/users/notifications', userNotificationsRouter);
+
+app.use('/users/drugs', userMedicationsRouter);
+
+app.use('/rewards', rewardsRouter);
+
+app.use('/users', userRouter);
+
 
 app.listen(process.env.DEV_PORT, () => {
     console.log('Server is running on http://localhost:' + process.env.DEV_PORT);

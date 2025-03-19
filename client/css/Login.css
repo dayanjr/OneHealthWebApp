@@ -1,0 +1,140 @@
+/* Body styling */
+.login-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: stretch;
+}
+
+/* Header styling */
+.logo-header {
+    padding-top: 5rem;
+    padding-bottom: 2rem;
+    flex: 1;
+}
+
+/* Login card styling */
+.login-card {
+    display: flex;
+    flex-flow: column nowrap; 
+    justify-content: center;
+    align-content: center;
+    border-radius: 20px;
+    flex: 3;
+}
+
+/* Form styling */
+.login-form {
+    padding: 20px;
+}
+
+/* Input styling */
+
+input[type=password], input[type=email] {
+    height: 2.5rem;
+    padding-left: 30px;
+    border-radius: 30px;
+    border-style: hidden;
+    background-color: rgb(213, 212, 212);
+    color: grey;
+}
+
+input[type="checkbox"] {
+    flex: 1;
+    align-self: flex-start;
+    appearance: none;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background-color: #eee;
+  
+    border: 1px solid #ccc;
+  
+    border-radius: 3px;
+  
+    width: 18px;
+  
+    height: 18px;
+  
+    cursor: pointer;
+}
+
+input[type="checkbox"]:checked::before {
+
+    content: "\2713"; /* Unicode checkmark character */
+  
+    color: #0d4a83;
+
+    padding: 2px 0 0 2px;
+
+    font-size: 16px;
+  
+  }
+
+form {
+    display: flex;
+    flex-flow: column;
+    row-gap: 25px;
+}
+
+/* Login card styling */
+.login-card {
+    background-color: white;
+    padding: 0.5rem;
+    width: 300px;
+}
+
+/* Label styling */
+label {
+    font-size: 12px;
+    color: #0d4a83;
+}
+
+/* Login links */
+.user-help {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.user-help input[type="checkbox"] {
+    flex: 1;
+}
+
+/* .user-help > label:nth-of-type(1) {
+    justify-items: flex-start;
+} */
+
+.user-help > label, .user-help > a {
+    font-size: 12px;
+    flex: 8;
+    color: #0d4a83; 
+    font-weight: normal;
+    text-decoration: none;
+}
+
+/* Account creation link */
+
+.account-creation {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.account-creation p {
+    color: black;
+    font-size: 12px;
+}
+
+.account-creation {
+    color: #0d4a83;
+    font-size: 12px;
+}
+
+/* Button styling */
+.login-button {
+    background-color: #0d4a83;
+    margin-top: 20px;
+}
