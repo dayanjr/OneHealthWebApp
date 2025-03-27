@@ -3,6 +3,8 @@
     "react-router-dom": "^7.4.0"
   },
   "devDependencies": {
+    "@types/express": "^5.0.1",
+    "@types/node": "^22.13.14",
     "@types/react-router-dom": "^5.3.3"
   }
 }
